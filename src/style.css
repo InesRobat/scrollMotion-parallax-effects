@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "chillax";
+  src: url("./font/Chillax-Regular.otf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,17 +21,31 @@ html {
 
 .section {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
   height: 100vh;
   position: relative;
   font-family: "Cabin", sans-serif;
   color: #ffeded;
   text-transform: uppercase;
-  font-size: 7vmin;
+  font-size: 3vmin;
   padding-left: 10%;
   padding-right: 10%;
+  font-family: "chillax";
 }
 
-section:nth-child(odd) {
-  justify-content: flex-end;
+section:nth-child(even) {
+  /* justify-content: flex-end; */
+  align-items: flex-end;
+}
+
+.audio {
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  cursor: pointer;
+  z-index: 100;
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
 }
